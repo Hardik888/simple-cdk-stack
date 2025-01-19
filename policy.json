@@ -1,0 +1,26 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "cloudformation:*",
+        "s3:*",
+        "sts:AssumeRole",
+        "iam:*",
+        "ecr:*",
+        "ssm:GetParameter",
+        "ssm:GetParameters",
+        "ssm:PutParameter",
+        "kms:*",
+        "lambda:*",
+        "sts:GetCallerIdentity"
+      ],
+      "Resource": [
+        "arn:aws:ssm:*:*:parameter/cdk-bootstrap/*",
+        "*",
+        "arn:aws:iam::*:role/cdk-*"
+      ]
+    }
+  ]
+}
